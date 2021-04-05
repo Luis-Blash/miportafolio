@@ -94,15 +94,42 @@ main{
 }
 
 /** Habilidades**/
+.habilidades{
+    display: flex;
+    justify-content: space-evenly;
+}
 .habilidades_card{
+    padding: 15px;
     margin: 10px;
     background-color: #fff;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
-    width: 340px;
-    height: 230px;
+    width: 300px;
+    
     text-align: center;
+    border-radius: 25px;
 }
 
-.habilidades_card img{
-    width: 50px;
+.habilidades_card > img{
+    margin: 15px 0;
+    width: 64px;
+}
+
+.habilidades_card_info ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.habilidades_card_info ul li{
+    flex-basis: calc(50% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.habilidades_card_info > ul li img{
+    width: 25px;
+    margin-left: 10px;
 }
