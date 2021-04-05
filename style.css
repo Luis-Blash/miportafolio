@@ -1,0 +1,108 @@
+
+/*
+font-family: 'Mitr', sans-serif;
+*/
+/*General*/
+h1,h2,p,ul,li{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mitr', sans-serif;
+}
+
+section{
+    margin-top: 30px;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Hearder*/
+header{
+    height: 80px;
+    overflow: hidden;
+}
+.header_info {
+    background-color: #BCE6FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10%;
+    height: 65%;
+}
+.header_info h1{
+    font-weight: normal;
+    font-style: italic;
+}
+.header_info nav{
+    display: flex;
+}
+.header_info nav div{
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_info nav div img{
+    width: 30px;
+    margin-left: 15px;
+}
+.header_barra {
+    height: 50%;
+}
+.header_barra img{
+    transform: rotate(180deg);
+    transform: rotateX(180deg);
+}
+
+/** Main **/
+/** acerca de **/
+main{
+    width: 900px;
+    margin: 0 auto;
+}
+
+.acerca{
+    display: flex;
+    height: 200px;
+}
+
+.acerca div{
+    flex-basis: calc(50% - 1rem);
+}
+
+.acerca_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+.acerca_info h2{
+    color: #53A6D8;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+.acerca_img{
+    overflow: hidden;
+    text-align: center;
+}
+.acerca_img img{
+    width: 80%;
+    height: 100%;
+}
+
+/** Habilidades**/
+.habilidades_card{
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
+    width: 340px;
+    height: 230px;
+    text-align: center;
+}
+
+.habilidades_card img{
+    width: 50px;
+}
