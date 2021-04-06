@@ -3,10 +3,15 @@
 font-family: 'Mitr', sans-serif;
 */
 /*General*/
-h1,h2,p,ul,li{
+h1,h2,p,ul,li,a{
     margin: 0;
     padding: 0;
     font-family: 'Mitr', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+    display: block;
 }
 
 section{
@@ -38,13 +43,13 @@ header{
 .header_info nav{
     display: flex;
 }
-.header_info nav div{
+.header_info nav a{
     margin-right: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.header_info nav div img{
+.header_info nav a > img{
     width: 30px;
     margin-left: 15px;
 }
@@ -133,4 +138,72 @@ main{
 .habilidades_card_info > ul li img{
     width: 25px;
     margin-left: 10px;
+}
+
+/** Contactame **/
+.contactame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactame > div{
+    flex-basis: calc(50% - 1rem);
+}
+
+.contactame_card_texto{
+    line-height: 25px;
+}
+
+.contactame_card_texto h2{
+    margin-bottom: 15px;
+}
+
+.contactame_img img{
+    width: 100%;
+}
+
+.contactame_card{
+    border-radius: 25px;
+    box-shadow: 0 3px 6px #ccc, 0 3px 6px #5555;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F4FBFF;   
+}
+
+.contactame_card_social{
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contactame_card_social a img,
+#gmail img{
+    width: 35px;
+}
+
+#gmail{
+    cursor: pointer;
+}
+
+/** footer **/
+footer{
+    background-image: url("src/footer.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 15px;
+    margin-top: 25px;
+}
+footer span{
+    color: #8E8E8E;
 }
