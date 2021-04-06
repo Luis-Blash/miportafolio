@@ -99,4 +99,53 @@ window.addEventListener("load",()=>{
         });
     }
     cardHabilidades(DATOS);
+
+    // Contactame
+    let gmail = document.getElementById("gmail");
+    gmail.addEventListener("click",() =>{
+        let card_social = document.getElementById("social");
+        let div_muestra = document.createElement("div");
+        div_muestra.classList = "muestra";
+        div_muestra.id = "muestra";
+        card_social.append(div_muestra);
+        let correo = document.createElement("p");
+        correo.innerHTML = "luisocampo.dev@gmail.com"
+        correo.id = "correo";
+        let copiar =  document.createElement("div");
+        copiar.innerHTML = "copiar";
+        copiar.classList = "boton";
+        div_muestra.append(correo);
+        copiar.addEventListener("click",() => {
+            eliminar(copiar);
+        });
+        div_muestra.append(copiar);
+
+    })
+    function eliminar(copiar) {
+        let no_mostrar = document.getElementById("muestra");
+        copiar.innerHTML = "Copiado ✔"
+        copiarCorreo("correo");
+        no_mostrar.classList = "no_mostrar"
+        let tiempo = setInterval(()=>{
+            console.log("Eliminado");
+            no_mostrar.remove();
+            clearInterval(tiempo);
+        },1000);
+    }
+
+    function copiarCorreo(id) {
+        let aux = document.createElement("input");
+        aux.setAttribute("value", document.getElementById(id).innerHTML);
+        document.body.appendChild(aux);
+        aux.select();
+        document.execCommand("copy");
+        document.body.removeChild(aux);
+    }
 });
+
+/*
+<div class="muestra" id="muestra">
+                        <p>luisocampo.dev@gmail.com</p>
+                        <div class="boton">Copiar</div>
+                    </div>
+*/
