@@ -130,7 +130,7 @@ window.addEventListener("load",()=>{
             console.log("Eliminado");
             no_mostrar.remove();
             clearInterval(tiempo);
-        },1000);
+        },900);
     }
 
     function copiarCorreo(id) {
@@ -142,10 +142,3 @@ window.addEventListener("load",()=>{
         document.body.removeChild(aux);
     }
 });
-
-/*
-<div class="muestra" id="muestra">
-                        <p>luisocampo.dev@gmail.com</p>
-                        <div class="boton">Copiar</div>
-                    </div>
-*/

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +15,7 @@
     <!--JavaScript-->
     <script src="index.js"></script>
 </head>
+
 <body>
     <!-- header -->
     <header>
@@ -32,9 +34,9 @@
             </nav>
         </div>
         <div class="header_barra">
-            <img src="src/header.svg" alt="header">     
+            <img src="src/header.svg" alt="header">
         </div>
-        
+
     </header>
     <!-- Main -->
     <main>
@@ -58,10 +60,27 @@
         </section>
         <!-- proyectos -->
         <a href="" name="portafolio"></a>
-        <section class="proyectos" id="proyectos"></section>
+        <h2 style="text-align: center; margin-top: 15px;">Mis proyectos</h2>
+        <section class="proyectos" id="proyectos">
+            <div class="proyectos_card">
+                <div class="proyectos_card_imagen">
+                    <img src="https://raw.githubusercontent.com/Luis-Blash/to-do-list/main/images/js/desde_js.png" alt="Proyecto">
+                </div>
+                <div class="proyectos_card_info">
+                    <h2>Titulo</h2>
+                    <div class="proyectos_card_info_creado">
+                        <span id="mysql">Python</span>
+                        <span id="javascript">JavaScript</span>
+                    </div>
+                    <p>
+                        To-do list es un proyecto el cual consiste en poner conectar tus tareas, una rest api creada con flask con conexion a mongo db y con diferentes concexiones frontend
+                    </p>
+                </div>
+            </div>
+        </section>
         <!-- Contactame -->
         <a href="" name="contactame"></a>
-        <section class="contactame" >
+        <section class="contactame">
             <div class="contactame_img">
                 <img src="src/contactame.svg" alt="contacto para mi">
             </div>
@@ -73,8 +92,10 @@
                 <div class="contactame_card_social" id="social">
                     <div id="gmail"><img src="src/gmail.png" alt="gmail"></div>
                     <a href="https://github.com/Luis-Blash" target="_blank"><img src="src/github.png" alt="github"></a>
-                    <a href="https://www.linkedin.com/in/luis-enrique-ocampo-gonzalez-769b5a20a/" target="_blank"><img src="src/linkedin.png" alt="linkedin"></a>
-                    <a href="https://twitter.com/luisblash3" target="_blank"><img src="src/twitter.png" alt="twitter"></a>
+                    <a href="https://www.linkedin.com/in/luis-enrique-ocampo-gonzalez-769b5a20a/" target="_blank"><img
+                            src="src/linkedin.png" alt="linkedin"></a>
+                    <a href="https://twitter.com/luisblash3" target="_blank"><img src="src/twitter.png"
+                            alt="twitter"></a>
                 </div>
             </div>
         </section>
@@ -84,4 +105,5 @@
         <span>Mi portafolio</span>
     </footer>
 </body>
+
 </html>
