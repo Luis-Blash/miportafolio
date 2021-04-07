@@ -1,6 +1,6 @@
 window.addEventListener("load",()=>{
     // Habilidades
-    let DATOS = [
+    let habilidades_datos = [
         {
             "Titulo":"Lenguajes",
             "img_titulo":"src/Lenguajes/lenguaje-de-codificacion.png",
@@ -98,7 +98,7 @@ window.addEventListener("load",()=>{
             
         });
     }
-    cardHabilidades(DATOS);
+    cardHabilidades(habilidades_datos);
 
     // Contactame
     let gmail = document.getElementById("gmail");
@@ -132,7 +132,6 @@ window.addEventListener("load",()=>{
             clearInterval(tiempo);
         },900);
     }
-
     function copiarCorreo(id) {
         let aux = document.createElement("input");
         aux.setAttribute("value", document.getElementById(id).innerHTML);
@@ -141,4 +140,104 @@ window.addEventListener("load",()=>{
         document.execCommand("copy");
         document.body.removeChild(aux);
     }
+
+    // Mi proyectos
+    let proyectos_datos = [
+        {
+            "imagen_proyecto":"https://raw.githubusercontent.com/Luis-Blash/to-do-list/main/images/js/desde_js.png",
+            "alt": "todolist",
+            "titulo":"To-do List",
+            "herramientas":["flask","javascript","css","html","mongo"],
+            "descripcion":"To-do list es un proyecto el cual consiste en poner conectar tus tareas, una rest api creada con flask con conexion a mongo db y con diferentes concexiones frontend",
+            "link":"https://github.com/Luis-Blash/to-do-list"
+        },
+        {
+            "imagen_proyecto":"src/trabajos/composturas.png",
+            "alt": "Composturas Eri",
+            "titulo":"Composturas Eri",
+            "herramientas":["javascript","html","css"],
+            "descripcion":"Composturas Eri es un proyecto hecho para una persona que se encarga de hacer composturas y arreglos a la ropa, es una pagina para poder contactarla",
+            "link":"https://composturaseri.netlify.app/"
+        },
+        {
+            "imagen_proyecto":"https://raw.githubusercontent.com/Luis-Blash/kodbox/master/github/Bienvenida.png",
+            "alt": "Kodbox",
+            "titulo":"Kodbox",
+            "herramientas":["django","python","css","html"],
+            "descripcion":"Kodbox es una pagina donde pudes subir noticias de programación parecido a un blog, usando el framework Django",
+            "link":"https://github.com/Luis-Blash/kodbox"
+        },
+        {
+            "imagen_proyecto":"https://raw.githubusercontent.com/Luis-Blash/hotel-react/main/hotel.png",
+            "alt": "Hotel React",
+            "titulo":"Hotel React",
+            "herramientas":["react","javascript","css","html"],
+            "descripcion":"Es una pagina muestra de como usar react para poder ver que tipo de cuarto hay",
+            "link":"https://github.com/Luis-Blash/hotel-react"
+        },
+        {
+            "imagen_proyecto":"https://raw.githubusercontent.com/ErickRV19/GameJS/master/img/Preview/GameJs%201.png",
+            "alt": "Game JS",
+            "titulo":"GameJS",
+            "herramientas":["javascript","css","html"],
+            "descripcion":"Es un proyecto colaborativo donde puedes subir juegos hechos en javascript como si de una plaaforma se tratara",
+            "link":"https://github.com/Luis-Blash/GameJS"
+        },
+        {
+            "imagen_proyecto":"src/trabajos/aprendeflask.png",
+            "alt": "Aprende Flask",
+            "titulo":"Aprende Flask",
+            "herramientas":["javascript","css","html","bootstrap"],
+            "descripcion":"Aprende flask es una pagina para aprender lo basico de del microframework el cual es flask",
+            "link":"https://aprende-flask.netlify.app/"
+        }
+    ];
+
+    function proyectosCard(datos) {
+        let proyectos = document.getElementById("proyectos");
+        datos.forEach(element =>{
+            // se crea el div de proyectos card
+            let div_proyectos_card = document.createElement("div");
+            div_proyectos_card.classList = "proyectos_card";
+            proyectos.append(div_proyectos_card);
+            // se creaa los div de imagen y de la información
+            let div_proyectos_card_imagen = document.createElement("div");
+            div_proyectos_card_imagen.classList = "proyectos_card_imagen";
+            let div_proyectos_card_info = document.createElement("div");
+            div_proyectos_card_info.classList = "proyectos_card_info";
+            // agreagar las nuevas etiquetas a proyectos card
+            div_proyectos_card.append(div_proyectos_card_imagen);
+            div_proyectos_card.append(div_proyectos_card_info);
+            // crear lenguajes y agregar a div_proyectos_card_info
+            let card_info_creado = document.createElement("div");
+            card_info_creado.classList = "proyectos_card_info_creado";
+            div_proyectos_card_info.append(card_info_creado);
+            element["herramientas"].forEach(element => {
+                let span =  document.createElement("span");
+                span.id = element;
+                span.innerHTML = element;
+                card_info_creado.append(span);
+            });
+            // crear imagen 
+            let imagen = document.createElement("img");
+            imagen.src = element["imagen_proyecto"];
+            imagen.alt = element["alt"];
+            div_proyectos_card_imagen.append(imagen);
+            // crear titulo
+            let titulo = document.createElement("h2");
+            titulo.innerHTML = element["titulo"];
+            div_proyectos_card_info.append(titulo);
+            // crear descripcion
+            let descripcion = document.createElement("p");
+            descripcion.innerHTML = element["descripcion"];
+            div_proyectos_card_info.append(descripcion);
+            // Link si tiene pagina
+            let link = document.createElement("a");
+            link.href = element["link"];
+            link.target = "_blank";
+            link.innerHTML= "Visita: " + element["titulo"];
+            div_proyectos_card_info.append(link);
+        })
+    }
+    proyectosCard(proyectos_datos);
 });

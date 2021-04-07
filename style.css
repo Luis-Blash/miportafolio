@@ -163,7 +163,7 @@ main{
 .proyectos_card_imagen{
     border-radius: 15px;
     width: 95%;
-    height: 50%;
+    height: 40%;
     overflow: hidden;
     margin-top: 15px;
 }
@@ -174,8 +174,8 @@ main{
 }
 
 .proyectos_card_info{
-    padding: 10px;
-    height: 50%;
+    padding: 5px;
+    height: 60%;
 }
 
 .proyectos_card_info > p{
@@ -188,6 +188,10 @@ main{
 .proyectos_card_info_creado > span{
     font-size: 1em;
     margin-left: 5px;
+}
+
+.proyectos_card_info > a{
+    color: #53A6D8;
 }
 
 #python,#css,#docker{
